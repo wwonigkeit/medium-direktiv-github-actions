@@ -33,7 +33,7 @@ jobs:
         with:
           wait: false
           server: demo.direktiv.io
-          workflow: github-actions/myworkflow
+          workflow: github-actions/custom-plugins-gettwitter-idlang
           data: |
             {
               "username": "Twitter"
