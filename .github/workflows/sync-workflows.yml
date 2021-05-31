@@ -31,7 +31,7 @@ jobs:
       - name: execute
         id: execute
         with:
-          server: demo.direktiv.io
+          server: playground.direktiv.io
           namespace: github-actions
           sync: custom-plugins-gettwitter-idlang.yaml
           token: ${{ secrets.DIREKTIV_TOKEN }}
