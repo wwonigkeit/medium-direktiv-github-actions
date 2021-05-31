@@ -32,13 +32,13 @@ jobs:
         id: execute
         with:
           wait: true
-          server: demo.direktiv.io
+          server: oz.direktiv.io
           workflow: github-actions/custom-plugins-gettwitter-idlang
           data: |
             {
               "username": "Twitter"
             }
-          token: ${{ secrets.DIREKTIV_TOKEN }}
+          token: ${{ secrets.OZ_DIREKTIV_TOKEN }}
         uses: vorteil/direktiv-actions-ghexec@v1
         
       - name: get output
