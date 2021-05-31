@@ -11,7 +11,7 @@ The following GitHub action variables are used and defined:
 - Data: 
 ```json
 {
-          "username" : "Twitter"
+   "username" : "Twitter"
 }
 ```
 -         
