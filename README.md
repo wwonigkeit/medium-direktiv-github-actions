@@ -6,14 +6,14 @@ The repository contains a very simple workflow which classifies the language use
 
 The following GitHub action variables are used and defined:
 
-- Server: demo.direktiv.io
-- Workflow: complex-workflow/custom-plugins-gettwitter-idlang
 - Data: 
 ```json
 {
    "username" : "Twitter"
 }
 ```
-- Token: ${{ secrets.DIREKTIV_TOKEN }}
 - Namespace: complex-workflow
-- Sync: tests/custom-plugins-gettwitter-idlang.yaml
+- Server: demo.direktiv.io
+- Sync: custom-plugins-gettwitter-idlang.yaml
+- Token: ${{ secrets.DIREKTIV_TOKEN }}
+- Workflow: complex-workflow/custom-plugins-gettwitter-idlang
