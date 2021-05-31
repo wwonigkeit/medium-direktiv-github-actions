@@ -12,9 +12,9 @@ https://medium.com/@wilhelm-wonigkeit/direktiv-github-actions-available-in-marke
 
 The following GitHub action variables are used and defined:
 
-`Data: { "username" : "Twitter" }
-Namespace: complex-workflow
-Server: demo.direktiv.io
-Sync: custom-plugins-gettwitter-idlang.yaml
-Token: ${{ secrets.DIREKTIV_TOKEN }}
-Workflow: complex-workflow/custom-plugins-gettwitter-idlang`
+- Data: { "username" : "Twitter" }
+- Namespace: github-actions
+- Server: demo.direktiv.io
+- Sync: custom-plugins-gettwitter-idlang.yaml
+- Token: ${{ secrets.DIREKTIV_TOKEN }}
+- Workflow: github-actions/custom-plugins-gettwitter-idlang`
