@@ -14,4 +14,6 @@ The following GitHub action variables are used and defined:
    "username" : "Twitter"
 }
 ```
--         
+- Token: ${{ secrets.DIREKTIV_TOKEN }}
+- Namespace: complex-workflow
+- Sync: tests/custom-plugins-gettwitter-idlang.yaml
