@@ -31,7 +31,7 @@ jobs:
       - name: execute
         id: execute
         with:
-          wait: false
+          wait: true
           server: demo.direktiv.io
           workflow: github-actions/custom-plugins-gettwitter-idlang
           data: |
