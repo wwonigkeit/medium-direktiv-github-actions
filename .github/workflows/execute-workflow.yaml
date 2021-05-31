@@ -31,7 +31,7 @@ jobs:
       - name: execute
         id: execute
         with:
-          wait: false
+          wait: true
           server: oz.direktiv.io
           workflow: github-actions/custom-plugins-gettwitter-idlang
           data: |
@@ -43,4 +43,4 @@ jobs:
         
       - name: get output
         run: |
-          echo ${{ steps.execute.outputs.body }}
+          echo ${{ steps.execute.outputs.instance-body }}
