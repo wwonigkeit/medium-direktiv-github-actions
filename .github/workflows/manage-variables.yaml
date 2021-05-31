@@ -1,0 +1,45 @@
+# This is a basic workflow to help you get started with Actions
+
+name: manage-variables
+
+# Controls when the action will run. 
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Runs a single command using the runners shell
+      - name: upload-namespace-var
+        id: upload-namespace-var
+        with:
+          server: oz.direktiv.io
+          namespace: github-actions
+          variable: namespace-user
+          data: |
+            {
+              "username": "Twitter"
+            }
+          token: ${{ secrets.OZ_DIREKTIV_TOKEN }}
+        uses: vorteil/direktiv-actions-ghupload@master
+        
+      - name: upload-workflow-var
+        id: upload-workflow-var
+        with:
+          server: oz.direktiv.io
+          namepsace: github-actions
+          variable: workflow-user
+          workflow: custom-plugins-gettwitter-idlang
+          data: |
+            {
+              "username": "Twitter"
+            }
+          token: ${{ secrets.OZ_DIREKTIV_TOKEN }}
+        uses: vorteil/direktiv-actions-ghupload@master
