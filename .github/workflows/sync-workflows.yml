@@ -31,8 +31,8 @@ jobs:
       - name: execute
         id: execute
         with:
-          server: playground.direktiv.io
+          server: oz.direktiv.io
           namespace: github-actions
           sync: custom-plugins-gettwitter-idlang.yaml
-          token: ${{ secrets.DIREKTIV_TOKEN }}
+          token: ${{ secrets.OZ_DIREKTIV_TOKEN }}
         uses: vorteil/direktiv-actions-ghsync@test
