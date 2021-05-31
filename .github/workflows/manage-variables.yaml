@@ -34,7 +34,7 @@ jobs:
         id: upload-workflow-var
         with:
           server: oz.direktiv.io
-          namepsace: github-actions
+          namespace: github-actions
           variable: workflow-user
           workflow: custom-plugins-gettwitter-idlang
           data: |
