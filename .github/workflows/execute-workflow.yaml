@@ -40,3 +40,7 @@ jobs:
             }
           token: ${{ secrets.DIREKTIV_TOKEN }}
         uses: vorteil/direktiv-actions-ghexec@v1
+        
+      - name: get output
+        run: |
+          echo ${{ steps.execute.outputs.body }}
