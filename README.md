@@ -8,7 +8,10 @@ The following GitHub action variables are used and defined:
 
 - Server: demo.direktiv.io
 - Workflow: complex-workflow/custom-plugins-gettwitter-idlang
-- Data: {
+- Data: 
+```json
+{
           "username" : "Twitter"
-        }
+}
+```
 -         
