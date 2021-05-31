@@ -1,0 +1,28 @@
+id: custom-plugins-gettwitter-idlang
+description: "Medium article workflow which gets the tweets for a username and checks the language"
+functions:
+  - id: gettweets
+    image: wwonigkeit/get-tweets:v1
+  - id: identifylang
+    image: wwonigkeit/identify-lang:v1
+    scale: 1
+states:
+  - id: print-something
+    type: noop
+    transition: get-tweets
+  - id: get-tweets
+    type: action
+    log: "."
+    action:
+      function: gettweets
+      input: .
+    transition: identify-lang
+  - id: identify-lang
+    log: "."
+    type: foreach
+    array: ".return[] | {Text}"
+    action:
+      function: identifylang
+      input: '{
+        "text": .Text
+      }'
