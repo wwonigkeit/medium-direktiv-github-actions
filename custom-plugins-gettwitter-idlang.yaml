@@ -26,6 +26,6 @@ states:
       input: '{
         "text": .Text
       }'
-  - id: print-output
+  - id: print-output-hello
     type: noop
     log: "."
